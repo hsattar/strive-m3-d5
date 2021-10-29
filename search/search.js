@@ -246,7 +246,6 @@ alt=""></div>
 searchLandingDisplay()
 
 const searchInput = document.querySelector('#song-search')
-// const searchQuery = searchInput.value
 const searchBtn = document.querySelector('#search-btn')
 
 window.onload = () => {
@@ -257,10 +256,6 @@ window.onload = () => {
 }
 
 searchInput.addEventListener('keyup', e => {
-    // if (e.keyCode === 13) {
-    //     e.preventDefault()
-    //     searchBtn.click()
-    // }
     if((searchInput.value.length === 0)) {
         searchLandingDisplay()
     } 
@@ -345,21 +340,17 @@ const searchResults = (data) => {
     let randomTime = Math.random()
     const searchResultsText = document.getElementById('search-results')
     let results = data.data
-    searchResultsText.innerHTML = `Showing <b>${results.length}</b> results for <b>${searchInput.value}</b> in <b>${randomTime}</b> seconds</b>`
+    searchResultsText.innerHTML = `Showing <b>${results.length}</b> results for <b>${searchInput.value}</b> in <b>${randomTime.toFixed(2)}</b> seconds</b>`
 }
 
 const callApi = (query) => {
     fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${query}`)
         .then(response =>response.json()
-        .then(function(data) {
+        .then(data => {
             searchResults(data)
             displayResults(data)
-        })
-        )
-    
-        .catch(function(err) {
-            console.log(`Fetch Error`, err)
-        })
+        }))
+        .catch(err => console.error(err))
 }
 
 searchBtn.addEventListener('click', () => {
