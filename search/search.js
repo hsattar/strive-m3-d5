@@ -335,6 +335,7 @@ const displayResults = (data) => {
         })
     })
 }
+//work
 
 const searchResults = (data) => {
     let randomTime = Math.random()
