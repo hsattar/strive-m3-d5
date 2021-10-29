@@ -32,33 +32,59 @@ const artistSongs = [
 ]
 
 
-const popularSongsContainer = document.querySelector('#popular-songs-container')
-console.log(popularSongsContainer)
 
-for (let i = 0; i < artistSongs.length; i++) {
-    const songRow = document.createElement('div')
-    songRow.classList.add('col-12')
-    songRow.innerHTML = `
-    <div class="row my-2 song-info">
-                        
+
+let getArtistBtn = document.querySelector(".btn-queen")
+     fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=eminem")
+    .then(response => {
+    return response.json();
+    })
+    .then(body => {
+        console.log(body);
+        // ${element.title}
+        let getBody = document.querySelector(".rowBody")
+        let allInOne  = body.data.map(element => `
+        <div class="row my-2 song-info">
         <div class="col-1 light-gray-text">
-            <p>${i + 1}</p>
         </div>
-
         <div class="col-8 col-md-7 d-md-flex">
-            <img class="artist-song-img mr-2 d-none d-md-block" src="${artistSongs[i].img}">
-            <p class="my-0 font-weight-bold">${artistSongs[i].name}</p>
-            <p class="d-md-none">${artistSongs[i].downloads}</p>
+            <img class="artist-song-img mr-2 d-none d-md-block" src="${element.album.cover_medium}">
+            <p class="my-0 font-weight-bold">${element.album.title}</p>
         </div>
-
-        <div class="col-1 col-md-3 light-gray-text">
-            <p class="d-none d-md-block">${artistSongs[i].downloads}</p>
-        </div>
-
         <div class="col-1 light-gray-text">
-            <p>${artistSongs[i].duration}</p>
+            <p>${element.duration}</p>
         </div>
+    </div>
+        
+        
+        
+        `).join('')
+        getBody.innerHTML = allInOne
+        // console.log(allInOne);
+    })
+.catch(err => {
+	console.error(err);
+});
 
-    </div>`
-    popularSongsContainer.appendChild(songRow)
-}
+
+
+
+
+
+
+// fetch("https://deezerdevs-deezer.p.rapidapi.com/track/eminem", {
+// 	"method": "GET",
+// 	"headers": {
+// 		"x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
+// 		"x-rapidapi-key": "e334965e54msh9ecc20393960d49p17a512jsn57ecf5713172"
+// 	}
+// })
+// .then(response => {
+// 	console.log(response.json());
+// })
+// // .then(data => {
+// // 	console.log(data);
+// // })
+// .catch(err => {
+// 	console.error(err);
+// });
