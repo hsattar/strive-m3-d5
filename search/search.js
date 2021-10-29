@@ -251,6 +251,9 @@ const searchBtn = document.querySelector('#search-btn')
 
 window.onload = () => {
     searchInput.focus()
+    setTimeout(() => {
+        localStorage.clear()
+    }, 2000)
 }
 
 searchInput.addEventListener('keyup', e => {
@@ -266,46 +269,6 @@ searchInput.addEventListener('keyup', e => {
     }
     console.log(searchInput.value.length)
 })
-
-searchBtn.addEventListener('click', () => {
-    callApi()
-    searchResults()
-    searchInput.value = ''
-})
-
-const userQuery = localStorage.getItem('userSearch')
-if (userQuery.length > 0) {
-    alert(userQuery)
-}
-
-const callApi = () => {
-    fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${searchInput.value}`)
-        .then(
-            function(response) {
-                if (response.status !== 200) {
-                    console.log(`There was an error. Status Code - ${response.status}`)
-                    return   
-                }
-    
-                response.json().then(function(data) {
-                    console.log(data)
-                    searchResults(data)
-                    displayResults(data)
-                })
-            }
-        )
-    
-        .catch(function(err) {
-            console.log(`Fetch Error`, err)
-        })
-}
-
-const searchResults = (data) => {
-    let randomTime = Math.random()
-    const searchResultsText = document.getElementById('search-results')
-    let results = data.data
-    searchResultsText.innerHTML = `Showing <b>${results.length}</b> results for <b>${searchInput.value}</b> in <b>${randomTime}</b> seconds</b>`
-}
 
 let playPauseBtnClicks = 0
 let currentSongTime = 0
@@ -378,4 +341,34 @@ const displayResults = (data) => {
     })
 }
 
+const searchResults = (data) => {
+    let randomTime = Math.random()
+    const searchResultsText = document.getElementById('search-results')
+    let results = data.data
+    searchResultsText.innerHTML = `Showing <b>${results.length}</b> results for <b>${searchInput.value}</b> in <b>${randomTime}</b> seconds</b>`
+}
 
+const callApi = (query) => {
+    fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${query}`)
+        .then(response =>response.json()
+        .then(function(data) {
+            searchResults(data)
+            displayResults(data)
+        })
+        )
+    
+        .catch(function(err) {
+            console.log(`Fetch Error`, err)
+        })
+}
+
+searchBtn.addEventListener('click', () => {
+    callApi(searchInput.value)
+    searchResults()
+    searchInput.value = ''
+})
+
+const userQuery = localStorage.getItem('userSearch')
+if (userQuery.length > 0) {
+    callApi(userQuery)
+}
