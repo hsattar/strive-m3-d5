@@ -273,6 +273,11 @@ searchBtn.addEventListener('click', () => {
     searchInput.value = ''
 })
 
+const userQuery = localStorage.getItem('userSearch')
+if (userQuery.length > 0) {
+    alert(userQuery)
+}
+
 const callApi = () => {
     fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${searchInput.value}`)
         .then(

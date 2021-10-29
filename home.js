@@ -67,3 +67,14 @@ for (let i = 0; i < albumContainers.length; i++) {
         displayData(albumContainers[i], 'album', album)
     })
 }
+
+let searchQuery = ''
+
+const songSearch = document.querySelector('#song-search')
+songSearch.addEventListener('keyup', e => {
+    if (e.keyCode === 13) {
+        window.location.href = 'http://127.0.0.1:5500/search/search.html'
+        searchQuery = songSearch.value
+        localStorage.setItem('userSearch', searchQuery)
+    }
+})
