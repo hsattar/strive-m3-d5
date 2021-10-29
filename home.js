@@ -23,6 +23,12 @@ const fetchData = (query) => {
     .catch(err => console.error(err))
 }
 
+const fetchData2 = (query) => {
+    return fetch(`https://striveschool-api.herokuapp.com/api/deezer/album/${query}`)
+    .then(response => response.json())
+    .catch(err => console.error(err))
+}
+
 const displayData = (container, artist) => {
     fetchData(artist)
     .then(artist => container.innerHTML +=  `
@@ -30,6 +36,18 @@ const displayData = (container, artist) => {
         <img src="${artist.picture_xl}" class="card-img-top pt-2 img-fluid" alt="...">
         <div class="card-body">
             <p class="hp-subhero-title">${artist.name}</p>
+        </div>
+    </div>`
+    )
+}
+
+const displayData2 = (container, album) => {
+    fetchData2(album)
+    .then(album => container.innerHTML +=  `
+    <div class="card hp-subhero-card col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
+        <img src="${album.cover_xl}" class="card-img-top pt-2 img-fluid" alt="...">
+        <div class="card-body">
+            <p class="hp-subhero-title">${album.title}</p>
         </div>
     </div>`
     )
@@ -63,3 +81,26 @@ artists[3].forEach(artist => {
 //         displayData(`artistContainer${i}`, artist)
 //     })
 // }
+
+const albums = [
+    ['86773062', '104188', '9007781', '69319552', '119606'],
+    ['11848922', '8990105', '15478674', '3791241', '13680908'],
+    ['14400090', '267291462', '182811182', '119043862', '41728321'],
+    ['9188269', '746059', '244223', '739505', '231552772']
+]
+
+albums[0].forEach(album => {
+    displayData2(albumContainer1, album)
+})
+
+albums[1].forEach(album => {
+    displayData2(albumContainer2, album)
+})
+
+albums[2].forEach(album => {
+    displayData2(albumContainer3, album)
+})
+
+albums[3].forEach(album => {
+    displayData2(albumContainer4, album)
+})
