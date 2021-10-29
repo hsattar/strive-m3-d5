@@ -1,0 +1,97 @@
+:root {
+    --light-green: #1ed760;
+    --light-black: #2a2a2a;
+    --dark-black: #121212;
+    --light-gray: #b3b3b3;
+    --white: #fff;
+    --black: #000;
+    /* --new-color: red; */
+}
+
+body {
+    background-color: var(--light-black);
+    color: var(--white);
+}
+
+.btn-hover:hover {
+    background-color: var(--light-gray);
+    color: black;
+}
+
+.displaynone {
+    display: none!important;
+}
+
+.display {
+    display: block;
+}
+
+h3:hover {
+    color: var(--light-green)
+}
+
+.styleSection {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 5px;
+}
+
+.styleSection#rockStyle {
+    background: linear-gradient( 180deg, rgba(116, 79, 79, 1) 0%, rgba(0, 0, 0, 0.7) 60%), url("/assets/background-genre/rock\ \(2\).jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.styleSection#undergroundStyle {
+    background: linear-gradient( 180deg, rgba(116, 79, 79, 1) 0%, rgba(0, 0, 0, 0.7) 60%), url("/assets/background-genre/underground.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.styleSection#rebStyle {
+    background: linear-gradient( 180deg, rgba(116, 79, 79, 1) 0%, rgba(0, 0, 0, 0.7) 60%), url("/assets/background-genre/r&b.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.styleSection#jazzStyle {
+    background: linear-gradient( 180deg, rgba(116, 79, 79, 1) 0%, rgba(0, 0, 0, 0.7) 60%), url("/assets/background-genre/jazz.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.styleSection#modernStyle {
+    background: linear-gradient( 180deg, rgba(116, 79, 79, 1) 0%, rgba(0, 0, 0, 0.7) 60%), url("/assets/background-genre/rock.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+div.styleSection div.hp-card:hover {
+    background-color: var(--dark-black);
+}
+
+.bg-songLibrary {
+    background: rgb(42, 42, 42);
+    background: linear-gradient( 0deg, rgba(42, 42, 42, 1) 0%, rgba(148, 8, 100, 1) 100%, rgba(148, 8, 100, 1) 100%);
+}
+
+div.hp-card {
+    margin-right: 5px;
+    min-width: fit-content;
+    min-height: fit-content;
+}
+
+div h5.hp-card-title {
+    font-size: 1.4em;
+}
+
+.modal-backdrop-show {
+    opacity: 0.8;
+}
+
+.modal-backdrop {
+    width: 200px;
+    height: 250px;
+    background-color: rgb(36, 27, 90);
+}

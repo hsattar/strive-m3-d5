@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify | Genres</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="genres.css">
+    <link rel="icon" type="image/png" href="/assets/iconspoti.png">
+
+
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+
+                    <!-- SIDEBAR -->
+                    <div class="col-2 d-none d-xl-block">
+                        <div class="row">
+                            <div class="side-bar col-12 px-0">
+                                <a href="../index.html"><img class="spotify-logo" src="../assets/spotify-logo.png" alt="sidebar-logo"></a>
+
+                                <a href="../index.html" class="d-flex py-2">
+                                    <i class="bi bi-house-door mx-3"></i>
+                                    <p>Home</p>
+                                </a>
+
+                                <a href="./genres.html" class="d-flex py-2 selected">
+                                    <i class="bi bi-collection-play mx-3"></i>
+                                    <p>Your Library</p>
+                                </a>
+
+                                <a href="../albums/albums.html" class="d-flex py-2">
+                                    <i class="bi bi-vinyl mx-3"></i>
+                                    <p>Albums</p>
+                                </a>
+
+                                <a href="../artists/artists.html" class="d-flex py-2">
+                                    <i class="bi bi-music-note-beamed mx-3"></i>
+                                    <p>Artists</p>
+                                </a>
+
+                                <a href="../favourites/favourites.html" class="d-flex py-2">
+                                    <i class="bi bi-heart-fill mx-3"></i>
+                                    <p>Liked Songs</p>
+                                </a>
+
+                                <a href="../profile/profile.html" class="d-flex py-2">
+                                    <i class="bi bi-person-circle mx-3"></i>
+                                    <p>Account</p>
+                                </a>
+
+                                <hr class="border-secondary">
+                                <div class="other-links">
+                                    <p>Funky Heavy Bluesy</p>
+                                    <p>Your Top songs 2020</p>
+                                    <p>In Love With You-Erykah B..</p>
+                                    <p>This is road Stewart</p>
+                                    <p>FRANCHISE ft.Young Thig...</p>
+                                    <p>Your Top Songs 2019</p>
+                                    <p>Pallegio</p>
+                                    <p>This is Joe Bonamassa</p>
+                                    <p>June 2019</p>
+                                    <p>Jack 30th Party 2<i class="ml-5 text-right bi bi-person-lines-fill"></i></p>
+                                    <p>Jack 30th Party<i class="ml-5 text-right bi bi-person-lines-fill"></i></p>
+                                    <p>This is Opeth</p>
+                                    <p>Metal Ballades</p>
+                                    <p>New Playlist</p>
+                                    <p>Your Top Songs 2018</p>
+                                    <p>Jazz Classics Blue Note...</p>
+                                    <p class="text-muted"><i class="bi bi-arrow-down-circle"> </i>Install app</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- SIDEBAR ENDS HERE -->
+
+                    <!-- SMALLER SIDEBAR (ICONS) -->
+
+                    <div class="col-2 d-none d-lg-block d-xl-none">
+                        <div class="row">
+                            <div class="side-bar col-12 text-light px-0">
+                                <a href="../index.html"><img class="spotify-logo" src="../assets/spotify-logo.png" alt="sidebar-logo"></a>
+
+                                <a href="../index.html" class="d-flex flex-column py-2 align-items-center justify-content-center">
+                                    <i class="bi bi-house-door"></i>
+                                    <p class="mx-0">Home</p>
+                                </a>
+
+                                <a href="./genres.html" class="d-flex flex-column py-2 align-items-center justify-content-center selected">
+                                    <i class="bi bi-collection-play"></i>
+                                    <p class="mx-0">Your Library</p>
+                                </a>
+
+                                <a href="../albums/albums.html" class="d-flex flex-column py-2 align-items-center justify-content-center">
+                                    <i class="bi bi-vinyl"></i>
+                                    <p class="mx-0">Albums</p>
+                                </a>
+
+                                <a href="../artists/artists.html" class="d-flex flex-column py-2 align-items-center justify-content-center">
+                                    <i class="bi bi-music-note-beamed"></i>
+                                    <p class="mx-0">Artists</p>
+                                </a>
+
+                                <a href="../favourites/favourites.html" class="d-flex flex-column py-2 align-items-center justify-content-center">
+                                    <i class="bi bi-heart-fill"></i>
+                                    <p class="mx-0">Liked Songs</p>
+                                </a>
+
+                                <a href="../profile/profile.html" class="d-flex flex-column py-2 align-items-center justify-content-center">
+                                    <i class="bi bi-person-circle mx-3"></i>
+                                    <p>Account</p>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SMALL SIDEBAR ENDS HERE -->
+
+
+                    <!-- REMAINING PAGE CONTENT GOES INSIDE COL-10 -->
+                    <div class="col-10">
+
+                        <div class="row ml-4 ">
+                            <!-- FRANCESCO CODE GOES HERE -->
+                            <div class="d-flex justify-content-between col-12 my-md-3 my-lg-5 border-bottom border-secondary">
+                                <h3>Genres page</h3>
+                                <button type="button" id="showListBtn" class="btn-secondary btn-sm btn-dark btn-hover rounded-pill" data-target="#showListBtn">
+  Show List
+</button>
+                            </div>
+                            <div class="col-12 text-center showList bg-songLibrary">
+                                <button type="button" id="rock" class="btn btn-secondary btn-sm btn-dark btn-hover col-12 col-sm-6 col-md-4 col-lg-2 my-1 my-sm-1 my-lg-2 mx-2 ">Rock</button>
+                                <button type="button" id="underground" class="btn btn-secondary btn-sm btn-dark btn-hover col-12 col-sm-6 col-md-4 col-lg-2 my-1 my-sm-1 my-lg-2 mx-2 ">Underground</button>
+                                <button type="button" id="r&b" class="btn btn-secondary btn-sm btn-dark btn-hover col-12 col-sm-6 col-md-4 col-lg-2 my-1 my-sm-1 my-lg-2 mx-2 ">R&B</button>
+                                <button type="button" id="jazz" class="btn btn-secondary btn-sm btn-dark btn-hover col-12 col-sm-6 col-md-4 col-lg-2 my-1 my-sm-1 my-lg-2 mx-2 ">Jazz</button>
+                                <button type="button" id="modern" class="btn btn-secondary btn-sm btn-dark btn-hover col-12 col-sm-6 col-md-4 col-lg-2 my-1 my-sm-1 my-lg-2 mx-2 ">Modern Rock</button>
+                                <button type="button" id="classical" class="btn btn-secondary btn-sm btn-dark btn-hover col-12 col-sm-6 col-md-4 col-lg-2 my-1 my-sm-1 my-lg-2 mx-2 ">Classical</button>
+                                <button type="button" id="fusion" class="btn btn-secondary btn-sm btn-dark btn-hover col-12 col-sm-6 col-md-4 col-lg-2 my-1 my-sm-1 my-lg-2 mx-2 ">Fusion</button>
+                                <button type="button" id="rap" class="btn btn-secondary btn-sm btn-dark btn-hover col-12 col-sm-6 col-md-4 col-lg-2 my-1 my-sm-1 my-lg-2 mx-2 ">Rap</button>
+                                <button type="button" id="pop" class="btn btn-secondary btn-sm btn-dark btn-hover col-12 col-sm-6 col-md-4 col-lg-2 my-1 my-sm-1 my-lg-2 mx-2 ">Pop</button>
+                                <button type="button" id="country" class="btn btn-secondary btn-sm btn-dark btn-hover col-12 col-sm-6 col-md-4 col-lg-2 my-1 my-sm-1 my-lg-2 mx-2 ">Country</button>
+                                <div class="col-12 border-bottom border-secondary"></div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="row mt-5 mx-4 ">
+                            <!-- FRANCESCO CODE GOES HERE -->
+
+
+                            <div class="styleSection displaynone" id="rockStyle">
+                                <h4 class="styleTitle">ROCK</h4>
+
+
+                                <div class="d-flex col-12 py-3 ">
+                                    <div class="d-flex flex-wrap mt-5 ">
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-6 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/10.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-1">
+                                                    <h5 class="hp-card-title">Deep Purple</h5>
+                                                    <p>Made in Japan</p>
+                                                    <i class="bi bi-heart dpurpletHeart" id="firstHeart"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-5 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/12.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-1">
+                                                    <h5 class="hp-card-title doors">Doors</h5>
+                                                    <p>The Doors</p>
+                                                    <i class="bi bi-heart doorstHeart"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-5 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-1">
+                                                    <h5 class="hp-card-title ">Led Zeppelin</h5>
+                                                    <p>Led Zeppelin IV</p>
+                                                    <i class="bi bi-heart ledZep"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-5 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-1">
+                                                    <h5 class="hp-card-title ">The Who</h5>
+                                                    <p>Who's Next</p>
+                                                    <i class="bi bi-heart who"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-5 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-1">
+                                                    <h5 class="hp-card-title ">Rolling Stones</h5>
+                                                    <p>Flowers</p>
+                                                    <i class="bi bi-heart roll"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-5 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-1">
+                                                    <h5 class="hp-card-title ">Pink Floyd</h5>
+                                                    <p>Atom Heart Mother</p>
+                                                    <i class="bi bi-heart pfloyd"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-5 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-1">
+                                                    <h5 class="hp-card-title ">The Clash</h5>
+                                                    <p>The Clash</p>
+                                                    <i class="bi bi-heart clash"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-5 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-1">
+                                                    <h5 class="hp-card-title ">The Police</h5>
+                                                    <p>Reggatta de Blanc</p>
+                                                    <i class="bi bi-heart police"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-5 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-1">
+                                                    <h5 class="hp-card-title">David Bowie</h5>
+                                                    <p>Space Oddity</p>
+                                                    <i class="bi bi-heart bowie"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-5 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-1">
+                                                    <h5 class="hp-card-title">Janis Joplin</h5>
+                                                    <p>Live in Honolulu</p>
+                                                    <i class="bi bi-heart joplin"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-5 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-1">
+                                                    <h5 class="hp-card-title">MFSB</h5>
+                                                    <p>Love is the message</p>
+                                                    <i class="bi bi-heart mfsb"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-5 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-1">
+                                                    <h5 class="hp-card-title">Jimi Hendrix</h5>
+                                                    <p>Are you experienced</p>
+                                                    <i class="bi bi-heart hendrix"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <!-- END ROCK SECTION -->
+                            <div class="styleSection displaynone" id="undergroundStyle">
+                                <h4 class="styleTitle">UNDERGROUND</h4>
+                                <div class="d-flex col-12 py-3 ">
+
+                                    <div class="d-flex flex-wrap mt-5">
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class=" mt-4">
+                                                    <h5 class="hp-card-title">UNDERGROUND</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END UNDERGROUND SECTION -->
+                            <div class="styleSection displaynone" id="rebStyle">
+                                <div class="d-flex col-12 py-3">
+                                    <h4 class="styleTitle">R&B</h4>
+                                    <div class="d-flex flex-wrap mt-5">
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">R&B</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END R&B SECTION -->
+                            <div class="styleSection displaynone" id="jazzStyle">
+
+                                <h4 class="styleTitle">JAZZ</h4>
+                                <div class="d-flex col-12 py-3">
+
+                                    <div class="d-flex flex-wrap mt-5 ">
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Jazz</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <!-- END JAZZ SECTION -->
+                            <div class="styleSection displaynone" id="modernStyle">
+                                <h4 class="styleTitle">MODERN ROCK</h4>
+                                <div class="d-flex col-12 py-3">
+                                    <div class="d-flex flex-wrap mt-5 ">
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Jazz</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="hp-card my-3 col-12 col-sm-6 col-md-4 col-lg-3">
+                                            <div class="d-flex">
+                                                <div class="hp-card-img">
+                                                    <img src="/assets/cards/1.jpg " width="70px" height="70px" alt="... ">
+                                                </div>
+                                                <div class="ml-3 mt-4">
+                                                    <h5 class="hp-card-title">Card title</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ==============   end modern style -->
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <!-- REMAING PAGE CONTENT ENDS HERE -->
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="favouriteSong" style="text-align: end;">
+
+        </div>
+
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+    <script src="genres.js"></script>
+    <script src="../likedsongs.js"></script>
+</body>
+
+</html>

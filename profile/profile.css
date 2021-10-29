@@ -1,0 +1,31 @@
+/* .profile-picture {
+  margin-top: 50px;
+} */
+
+/* .label-name {
+  margin-top: 70px;
+  margin-left: 50px;
+} */
+body{
+  background-color: #000000;
+}
+.form-control {
+  background-color: var(--dark-black);
+  border: none;
+  outline: none;
+}
+
+.edit-info {
+  margin-left: 10px;
+}
+
+.profile-pic {
+  margin-top: -95px;
+  margin-left: 40px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.normal-text {
+  font-size: 1.25rem;
+}

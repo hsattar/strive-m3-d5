@@ -1,0 +1,53 @@
+:root {
+  --songTime: 0px;
+}
+
+.search-card {
+  flex-direction: column;
+  width: 170px;
+  height: 170px;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.search-img {
+  height: 100px;
+  width: 100px;
+  transform: rotate(30deg);
+  margin-top: 25px;
+  margin-right: -10px;
+
+  z-index: 0;
+}
+
+#search-everything {
+  flex-wrap: wrap;
+  margin: 7px;
+}
+.title {
+  z-index: 1;
+  display: inline;
+}
+
+.cardimg {
+  overflow: hidden;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+#playPauseBtn {
+  cursor: pointer;
+}
+
+.music-controls {
+  z-index: 3;
+}
+
+.track-bar::before {
+  content: "";
+  background-color: var(--light-green);
+  position: absolute;
+  height: 3px;
+  width: var(--songTime);
+  border-radius: 500px;
+}

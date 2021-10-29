@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+.artist-queen {
+  background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+  background-size: cover;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-size: 50px;
+}
+
+.album-img-container .col-12 {
+  padding: 0;
+}
+
+.divider {
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+.album-img-header {
+  height: 500px;
+}
+
+.album-header-image {
+  background-image: url(../assets/queen1.jpg);
+  height: 100%;
+  padding: 1.25rem;
+  background-position: center;
+}
+
+.album-info {
+  position: absolute;
+  bottom: 10px;
+  left: 50px;
+}
+.album-info > p:first-of-type {
+  font-size: 70px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.album-info > p:last-of-type {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--white);
+}
+
+.follow-btn {
+  margin-left: 1.5rem;
+  border: 1px solid var(--white);
+  padding: 0.25rem 0.75rem;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.follow-btn:hover {
+  background-color: var(--white);
+  color: var(--black);
+  cursor: pointer;
+}
+
+.see-more {
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.album-header-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgb(42, 42, 42);
+  background: linear-gradient(
+    180deg,
+    rgba(42, 42, 42, 0) 0%,
+    rgba(42, 42, 42, 0) 48%,
+    rgba(42, 42, 42, 0) 85%,
+    #706f70 100%
+  );
+}
+
+.bg-wrapper {
+  background: rgb(42, 42, 42);
+  background: linear-gradient(0deg, #2a2a2a 60%, #706f70 100%);
+
+  /* background: rgb(31,31,31);
+background: linear-gradient(0deg, rgba(31,31,31,1) 0%, rgba(12, 11, 11, 0.609) 76%); */
+}
+
+.artist-song-img {
+  height: 40px;
+}
+
+.artist-pick-img {
+  height: 60px;
+}
+
+.posted-by img {
+  height: 20px;
+  border-radius: 50%;
+}
+
+* {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.verified-artist-badge {
+  display: flex;
+  align-items: center;
+}

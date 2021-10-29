@@ -1,0 +1,117 @@
+.album-img-container .col-12 {
+  padding: 0;
+}
+
+.divider {
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+.bg-wrapper {
+  /* background: rgb(206, 132, 120);
+  background: linear-gradient(
+    180deg,
+    rgba(206, 132, 120, 1) 0%,
+    rgba(206, 132, 120, 1) 5%,
+    rgba(42, 42, 42, 1) 20%
+  ); */
+}
+
+#album-header-container {
+  height: 250px;
+  padding-top: 30px;
+  transform: scaleY(1.2);
+  /* background: rgb(206, 132, 120);
+  background: linear-gradient(
+    180deg,
+    rgb(221, 157, 147) 0%,
+    rgba(206, 132, 120, 1) 55%,
+    rgba(206, 132, 120, 1) 88%
+  ); */
+}
+
+.album-img {
+  height: 250px;
+  display: flex;
+  max-width: 240px;
+}
+.album-img img {
+  width: 240px;
+  box-shadow: 0px 4px 19px -1px #252525;
+}
+
+.album-content {
+  display: flex;
+  align-items: end;
+  transform: scaleY(0.9);
+}
+
+.album-content-text .album-title {
+  font-weight: 800;
+  margin: 0;
+  font-size: 45px;
+}
+
+.album-content-text .album-mini-info {
+  font-size: small;
+  color: #c8a6c0;
+  margin: 0;
+}
+
+.album-content-text .album-mini-info p {
+  margin: 0;
+}
+
+.album-content-text .profile-name {
+  color: white;
+  margin: 0;
+  margin: 0;
+}
+
+.album-content-text .album-badge {
+  margin: 0;
+  font-size: small;
+  font-weight: 700;
+}
+
+#album-songs-container {
+  padding-top: 30px;
+}
+
+/* * {
+  overflow: hidden;
+  overflow-y: scroll;
+} */
+
+.album-content {
+  overflow: default;
+}
+
+.album-content img {
+  height: 200px;
+  box-shadow: 0px 4px 19px -1px #252525;
+}
+.carasoul-btn1 {
+  margin-top: 3px;
+  height: 45px;
+  width: 130px;
+}
+.btn-saved {
+  width: 150px;
+  border-color: white;
+}
+.dot-icon {
+  margin-left: 10px;
+  font-size: 35px;
+}
+
+.album-controls {
+  z-index: 2;
+}
+
+/* music API controls */
+
+.music-play-btn {
+  width: 60px;
+  height: 48px;
+}

@@ -1,0 +1,155 @@
+body {
+    background-color: #fff;
+    color: black;
+}
+
+.login-logo {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.login-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.h5 {
+    font-size: small;
+    font-weight: bold;
+}
+
+.btn1 {
+    font-size: 14px;
+    letter-spacing: 0.2rem;
+    min-width: 350px;
+    color: white;
+    max-height: 45px;
+    padding: 12px 14px 16px;
+}
+
+.btn-facebook {
+    background-color: #3b5998;
+}
+
+.btn-apple {
+    background-color: #000000;
+}
+
+.facebookIcon {
+    color: #3b5998;
+}
+
+.appleIcon {
+    color: white;
+}
+
+#login-with .login-with-items {
+    width: 100%;
+}
+
+#login-with .login-with-items a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.login-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+.btn-signup {
+    font-size: 14px;
+    min-width: 350px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: white;
+    border-radius: 25px;
+    border: 2px solid #616467;
+    height: 45px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.btn-signup:hover {
+    background-color: #616467;
+    color: white;
+}
+
+.content {
+    max-width: 450px;
+    margin: auto;
+}
+
+.divider-title {
+    background: #fff;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 0 20px;
+    text-transform: uppercase;
+}
+
+#login-input-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#login-input-form label {
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+#login-input-form .login-input-fields {
+    height: 40px;
+}
+
+#login-input-form #login-input-form a {
+    color: gray;
+}
+
+#login-input-form .pass-reset-link {
+    color: gray;
+    text-decoration: underline;
+    margin-top: 40px;
+}
+
+#login-input-form .pass-reset-link:hover {
+    color: green;
+}
+
+#login-input-form .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox input {
+    margin: 5px;
+    height: 40px;
+}
+
+#login-input-form .login-input-submit-btn {
+    border: none;
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    width: 210px;
+    transition: 300ms ease-in-out;
+}
+
+#login-input-form .login-input-submit-btn:hover {
+    background-color: rgb(114, 180, 114);
+    transition: 300ms ease-in-out;
+}
