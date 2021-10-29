@@ -33,7 +33,7 @@ const artistSongs = [
 
 
 
-
+fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=ummon")
     .then(response => {
     return response.json();
     })
@@ -41,7 +41,7 @@ const artistSongs = [
         console.log(body);
         let getBody = document.querySelector(".rowBody")
         
-        let allInOne  = body.data.map(element => `     fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=ummon")
+        let allInOne  = body.data.map(element => `    
 
         <div class="row my-2 song-info">
             <div class="col-1 light-gray-text">
