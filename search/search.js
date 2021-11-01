@@ -278,7 +278,7 @@ const displayResults = (data) => {
         const resultsCard = document.createElement('div')
         resultsCard.className = 'hp-subhero-card col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 m-2 rounded'
         resultsCard.innerHTML = `   
-        <img src="${result.album.cover_small}" class="card-img-top pt-2 img-fluid" alt="...">
+        <img src="${result.album.cover_xl}" class="card-img-top pt-2 img-fluid" alt="...">
         <div class="card-body">
             <div class="buttoncard"></div>
             <p class="hp-subhero-title">Song - ${result.title}</p>
