@@ -1,38 +1,3 @@
-const artistSongs = [
-    {
-        img: "../assets/cards/1.jpg",
-        name: "Another One Bites The Dust - Remastered 2011",
-        downloads: "1,013,238,772",
-        duration: "3:34",
-    },
-    {
-        img: "../assets/cards/2.jpg",
-        name: "Bohenmian Rhapsody - Remastered 2011",
-        downloads: "1,497,986258",
-        duration: "5:54",
-    },
-    {
-        img: "../assets/cards/3.jpg",
-        name: "Don't Stop Me Now - Remastered 2011",
-        downloads: "1,063,959,983",
-        duration: "3:29",
-    },
-    {
-        img: "../assets/cards/4.jpg",
-        name: "Under Pressure - Remastered 2011",
-        downloads: "900,225,096",
-        duration: "4:08",
-    },
-    {
-        img: "../assets/cards/6.jpg",
-        name: "We Will Rock You - Remastered 2011",
-        downloads: "705,225,721",
-        duration: "2:02",
-    }
-]
-
-
-
 fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=ckay")
     .then(response => {
     return response.json();
