@@ -18,10 +18,12 @@ const displayData = (container, queryType, query) => {
         fetchData(queryType, query)
         .then(query => container.innerHTML +=  `
         <div class="card hp-subhero-card col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">
-            <img src="${query.picture_xl}" class="card-img-top pt-2 img-fluid" alt="...">
-            <div class="card-body">
-                <p class="hp-subhero-title">${query.name}</p>
-            </div>
+            <a href="./artists/artists.html?album=${query.id}">
+                <img src="${query.picture_xl}" class="card-img-top pt-2 img-fluid" alt="...">
+                <div class="card-body">
+                    <p class="hp-subhero-title">${query.name}</p>
+                </div>
+            </a>
         </div>`
         )
     }

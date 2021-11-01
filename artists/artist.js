@@ -1,43 +1,20 @@
-fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=ckay")
-    .then(response => {
-    return response.json();
-    })
-    .then(body => {
-        console.log(body);
-        let getBody = document.querySelector(".rowBody")
-
-        let allInOne  = body.data.map(element => `
-
-        <div class="row my-2 song-info">
-            <div class="col-1 light-gray-text">
-            </div>
-            <div class="col-8 col-md-7 d-md-flex">
-                <img class="artist-song-img mr-2 d-none d-md-block" src="${element.album.cover_medium}">
-                <p class="my-0 font-weight-bold">${element.album.title}</p>
-            </div>
-            <div class="col-1 light-gray-text">
-                <p>${element.duration}</p>
-            </div>
-         </div>
+const fetchData = query => {
+    fetch(`https://striveschool-api.herokuapp.com/api/deezer/artist/${query}`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data)
+            displayArtistData(data)
+        })
+        .catch(error => console.error(error))
+}
+            
+const displayArtistData = (data) => {
+    const artistName = document.querySelector('.artist-name')
+    const albumHeader = document.querySelector('.album-header-image')
+    artistName.innerText = data.name
+    albumHeader.style.backgroundImage = `url(${data.picture_xl})`
+} 
 
 
-
-        `).join('')
-        getBody.innerHTML = allInOne
-        let albumHeaderImg = document.querySelector(".album-header-image")
-        albumHeaderImg.style.backgroundImage = `url(${body.data[0].album.cover_xl}) `
-        let getArtistName = document.querySelector(".artist-queen")
-        getArtistName.innerText = `${body.data[0].artist.name}`
-        let selectImgArtist = document.getElementById("img-Artist")
-        selectImgArtist.src = ` ${body.data[0].album.cover_small} `
-
-
-        let selectPostedByArtist = document.getElementById("posted-ByArtist")
-        selectPostedByArtist.innerHTML = `${body.data[0].artist.name}`
-
-        let selectHeader = document.getElementById("bestOfArtist")
-        selectHeader.innerHTML = `${body.data[0].artist.name}`
-
-
-
-    })
+const albumId = new URLSearchParams(window.location.search).get('album')
+fetchData(albumId)

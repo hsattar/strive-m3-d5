@@ -1,19 +1,20 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 
-.artist-queen {
-  background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+.artist-name {
+  /* background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
   background-size: cover;
   color: transparent;
   -moz-background-clip: text;
-  -webkit-background-clip: text;
+  -webkit-background-clip: text; */
+  color: var(--light-green);
   text-transform: uppercase;
   font-size: 50px;
 }
-.title{
+.title {
   position: absolute;
   left: 125px;
 }
-.duration{
+.duration {
   position: relative;
   left: 820px;
 }
