@@ -63,4 +63,6 @@ const displayAlbum = album => {
     </div>`).join('')
 }
 
-fetchAlbum(15478674)
+const albumId = new URLSearchParams(window.location.search).get('album')
+if (albumId !== null) fetchAlbum(albumId)
+if (albumId === null) fetchAlbum(15478674)

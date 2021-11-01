@@ -39,6 +39,6 @@ const displayArtistSongs = songs => {
 }
 
 
-const albumId = new URLSearchParams(window.location.search).get('album')
-if (albumId !== null) fetchData(albumId)
-if (albumId === null) fetchData(12246)
+const artistId = new URLSearchParams(window.location.search).get('artist')
+if (artistId !== null) fetchData(artistId)
+if (artistId === null) fetchData(12246)
