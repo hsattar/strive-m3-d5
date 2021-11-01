@@ -33,15 +33,15 @@ const artistSongs = [
 
 
 
-fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=ummon")
+fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=ckay")
     .then(response => {
     return response.json();
     })
     .then(body => {
         console.log(body);
         let getBody = document.querySelector(".rowBody")
-        
-        let allInOne  = body.data.map(element => `    
+
+        let allInOne  = body.data.map(element => `
 
         <div class="row my-2 song-info">
             <div class="col-1 light-gray-text">
@@ -54,53 +54,25 @@ fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=ummon")
                 <p>${element.duration}</p>
             </div>
          </div>
-        
-        
-        
+
+
+
         `).join('')
         getBody.innerHTML = allInOne
         let albumHeaderImg = document.querySelector(".album-header-image")
-        albumHeaderImg.style.backgroundImage = `url(${body.data[0].album.cover_xl}) `   
+        albumHeaderImg.style.backgroundImage = `url(${body.data[0].album.cover_xl}) `
         let getArtistName = document.querySelector(".artist-queen")
         getArtistName.innerText = `${body.data[0].artist.name}`
         let selectImgArtist = document.getElementById("img-Artist")
         selectImgArtist.src = ` ${body.data[0].album.cover_small} `
-                                    
-    
+
+
         let selectPostedByArtist = document.getElementById("posted-ByArtist")
         selectPostedByArtist.innerHTML = `${body.data[0].artist.name}`
 
         let selectHeader = document.getElementById("bestOfArtist")
         selectHeader.innerHTML = `${body.data[0].artist.name}`
-    
-    
-       
-        // console.log(allInOne);
-    })    
-    
-
-        // let getBody = document.querySelector(".rowBody")
 
 
 
-
-
-
-
-
-// fetch("https://deezerdevs-deezer.p.rapidapi.com/track/eminem", {
-// 	"method": "GET",
-// 	"headers": {
-// 		"x-rapidapi-host": "deezerdevs-deezer.p.rapidapi.com",
-// 		"x-rapidapi-key": "e334965e54msh9ecc20393960d49p17a512jsn57ecf5713172"
-// 	}
-// })
-// .then(response => {
-// 	console.log(response.json());
-// })
-// // .then(data => {
-// // 	console.log(data);
-// // })
-// .catch(err => {
-// 	console.error(err);
-// });
+    })
